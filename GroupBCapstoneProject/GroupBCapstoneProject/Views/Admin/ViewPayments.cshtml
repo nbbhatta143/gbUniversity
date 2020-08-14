@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <div id="View Payments">
+        <h4>Payments</h4>
+        <div class="col-md-12">
+            <div class="row" style="font-weight: bold">
+                <div class="col-md-3">First Name</div>
+                <div class="col-md-3">Last Name</div>
+                <div class="col-md-3">Payment Amount</div>
+                <div class="col-md-3">Date</div>
+            </div>
+
+            <div class="row">
+                @foreach (PaymentWithNames payment in ViewBag.listOfPayments)
+                {
+                    <div class="col-md-3">@payment.FirstName</div>
+                    <div class="col-md-3">@payment.LastName</div>
+                    <div class="col-md-3">@payment.AmountPaid</div>
+                    <div class="col-md-3">@payment.Date</div>
+                }
+            </div>
+        </div>
+    </div>
+}

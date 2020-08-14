@@ -1,0 +1,114 @@
+﻿@model IEnumerable<DataIndex_vm>
+@using GroupBCapstoneProject.Data;
+
+@{
+
+    <h3>Admin Controls</h3>
+    @using (Html.BeginForm("Index", "Admin", FormMethod.Post))
+    {
+        <input type="submit" value="Add Course" class="btn btn-primary" name="btnSubmit" />
+        <input type="submit" value="General Journal" class="btn btn-primary" name="btnSubmit" />
+        <input type="submit" value="Accounts Receivable" class="btn btn-primary" name="btnSubmit" />
+        <input type="submit" value="Accounts Payable" class="btn btn-primary" name="btnSubmit" />
+        <input type="submit" value="Create Account" class="btn btn-primary" name="btnSubmit" />
+    }
+    <p>
+
+    </p>
+    <hr />
+    <div id="Show Students">
+        <h4>Student</h4>
+        <div class="col-md-12">
+            <div class="row" style="font-weight: bold">
+                <div class="col-md-2">Name</div>
+                <div class="col-md-3">Major</div>
+                <div class="col-md-1">Balance</div>
+                <div class="col-md-4">Email Address</div>
+                <div class="col-md-2">Phone Number</div>
+            </div>
+
+            <div class="row">
+                @foreach (Student student in ViewBag.listOfStudents)
+                {
+                    <div class="col-md-2">@String.Join(" ", student.FirstName, student.LastName)</div>
+                    <div class="col-md-3">@student.Major</div>
+                    <div class="col-md-1">@student.Balance</div>
+                    <div class="col-md-4">@student.EmailAddress</div>
+                    <div class="col-md-2">@student.PhoneNumber</div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <p>
+
+    </p>
+    <hr />
+
+    <div id="Show Faculty">
+        <h4>Faculty</h4>
+        <div class="col-md-12">
+            <div class="row" style="font-weight: bold">
+                <div class="col-md-1">Faculty ID</div>
+                <div class="col-md-2">Name</div>
+                <div class="col-md-3">Department</div>
+                <div class="col-md-4">Email Address</div>
+                <div class="col-md-2">Phone Number</div>
+            </div>
+
+            <div class="row">
+                @foreach (Faculty faculty in ViewBag.listOfFaculty)
+                {
+                    <div class="col-md-1">@faculty.ID</div>
+                    <div class="col-md-2">@String.Join(" ", faculty.FirstName, faculty.LastName)</div>
+                    <div class="col-md-3">@faculty.Department</div>
+                    <div class="col-md-4">@faculty.EmailAddress</div>
+                    <div class="col-md-2">@faculty.PhoneNumber</div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <p>
+
+    </p>
+    <hr />
+
+    <div id="Show Courses">
+        <h4>Courses</h4>
+        <div class="col-md-12">
+            <div class="row" style="font-weight: bold">
+                <div class="col-md-1">Course Number</div>
+                <div class="col-md-1">Section Number</div>
+                <div class="col-md-1">Capacity</div>
+                <div class="col-md-1">Enrollment</div>
+                <div class="col-md-1">FacultyID</div>
+                <div class="col-md-2">Start Time</div>
+                <div class="col-md-2">End Time</div>
+                <div class="col-md-2">Building Name</div>
+                <div class="col-md-1">Building Number</div>
+            </div>
+
+            <div class="row">
+                @foreach (Course course in ViewBag.listOfCourses)
+                {
+                    <div class="col-md-1">@course.CourseNumber</div>
+                    <div class="col-md-1">@course.SectionNumber</div>
+                    <div class="col-md-1">@course.Capacity</div>
+                    <div class="col-md-1">@course.Enrollment</div>
+                    <div class="col-md-1">@course.FacultyID</div>
+                    <div class="col-md-2">@course.StartTime</div>
+                    <div class="col-md-2">@course.EndTime</div>
+                    <div class="col-md-2">@course.BuildingName</div>
+                    <div class="col-md-1">@course.BuildingNumber</div>
+
+                }
+            </div>
+        </div>
+    </div>
+    {
+
+    }
+
+
+}

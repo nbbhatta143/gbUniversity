@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "RegisterForCourse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using GroupBCapstoneProject.Data;
+<body>
+    <p align="center"><strong><span style="font-size:14pt">Register To Teach A Class</span></strong></p>
+    <a class="text-white" href="@Url.Content("~/Available Courses.docx")">Check out our courses</a>
+    <div>
+        <table id="Courses" class="table table-striped table-bordered table-sm bg-white table-hover" style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellspacing="0" cellpadding="3" bordercolor="#bbbbbb" border="1" align="center">
+            <thead>
+                <tr class="alert alert-success">
+                    <th>Course Number</th>
+                    <th>Section Number</th>
+                    <th>Available Seats</th>
+                    <th>Faculty</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Credit Hours</th>
+                    <th>Building Name</th>
+                    <th>Building Number</th>
+                    <th>Meets on Monday</th>
+                    <th>Meets on Tuesday</th>
+                    <th>Meets on Wednesday</th>
+                    <th>Meets on Thursday</th>
+                    <th>Meets on Friday</th>
+                    <th>Meets on Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (CourseForRegistration course in ViewBag.listOfCoursesForRegistration)
+                {
+                    <tr>
+                        <td>@course.CourseNumber</td>
+                        <td>@course.SectionNumber</td>
+                        <td>@course.AvailableSeats</td>
+                        <td>@course.Faculty</td>
+                        <td>
+                            @if (course.StartTime.HasValue)
+                            {
+                                @course.StartTime.Value.ToString("T");
+                            }
+                            else
+                            { @course.StartTime.ToString();
+                        }
+                        </td>
+                        <td>
+                            @if (course.EndTime.HasValue)
+                            {
+                                @course.EndTime.Value.ToString("T");
+                            }
+                            else
+                            { @course.EndTime.ToString();
+                        }
+                        </td>
+                        <td>@course.CreditHours</td>
+                        <td>@course.BuildingName</td>
+                        <td>@course.BuildingNumber</td>
+                        <td>@course.MeetsOnMonday</td>
+                        <td>@course.MeetsOnTuesday</td>
+                        <td>@course.MeetsOnWednesday</td>
+                        <td>@course.MeetsOnThursday</td>
+                        <td>@course.MeetsOnFriday</td>
+                        <td>@course.MeetsOnSaturday</td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <p style="font-weight: bold">Want to register for a class?  Select the Section Number of the class you would like and hit Register.</p>
+    <div style="color: #ff0000;">@ViewData["ErrorMessage"]</div>
+
+    <form action="/Faculty/RegisterForCourse" method="post">
+
+        <select id="SelectSectionNumberList" name="courseID">
+            @foreach (CourseForRegistration course in ViewBag.listOfCoursesForRegistration)
+            {
+                <option value="@course.ID">@course.SectionNumber</option>
+            }
+        </select>
+
+        <button type="submit" class="btn btn-dark">Register</button>
+    </form>
+</body>

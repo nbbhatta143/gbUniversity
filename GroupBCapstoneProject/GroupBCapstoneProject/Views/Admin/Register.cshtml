@@ -1,0 +1,17 @@
+﻿<h1>Register Page</h1>
+
+<form action="/admin/Register" method="post">
+    <input type="text" name="username" value="" placeholder="username"/>
+    <input type="password" name="password" value="" placeholder="password"/>
+    <input type="radio" id="student" name="roleInSchool" value="Student"/>
+    <label for="student">Student</label>
+    <input type="radio" id="faculty" name="roleInSchool" value="Faculty" />
+    <label for="faculty">Faculty</label>
+    <input type="radio" id="admin" name="roleInSchool" value="Admin" />
+    <label for="admin">Admin</label>
+    <button type="submit">Register</button>
+</form>
+
+<p>Username can't have a space.</p>
+<p>Password needs to be between 6-20 characters and must include a capital letter and a number</p>
+<p>Note: There isn't a validation on this page due to time restraints</p>

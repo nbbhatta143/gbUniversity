@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body{
+margin:0;
+padding: 0;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+section{
+    
+    
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/) ;
+    background-size: cover;
+    background-color: #cccccc;
+  
+    
+    
+}
+section .leftbox{
+    
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 50px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+section .leftbox .content{
+    
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    padding: 40px;
+    transition: .5s
+    
+}
+
+section .leftbox .content:hover{
+    background: #e91e63;
+    
+}
+
+section .leftbox .content h1{
+    margin: 0;
+    padding: 0;    
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    
+}
+
+section .leftbox .content p{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+section .events{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    float: right;
+    box-sizing: border-box; 
+   
+    
+}
+
+
+section .events ul{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0px;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+section .events ul li{
+    list-style: none;
+    background:#fff;
+    box-sizing: border-box;
+    height:250px;
+    margin: 20px 0;
+}
+section .events ul li .time{
+    position: relative;
+    padding: 20px;
+    background: #262626;
+    box-sizing: border-box;
+    width: 20%;
+    height: 80%;
+    float: left;
+    text-align: center;
+    transition: .5s;
+    
+    }
+section .events ul li:hover .time {
+    background: #e91e63;
+    
+}
+section .events ul li .time h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 40px;
+}
+    
+section .events ul li .time h2 span {
+    font-size: 30px;
+}
+
+
+section .events ul li .details{
+    
+    padding: 20px;
+    background: #fff;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+section .events ul li .details h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    
+}
+
+section .events ul li .details p{
+    position: relative;
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 16px;
+    margin-bottom: 16px;
+    
+}
+
+section .events ul li .details a{
+    display: inlinblock;
+    text-decoration: none;
+    padding: 10px 12px;
+    border: 2px solid #262626;
+    font-size: 16px;
+    transition: .5s;
+  
+   
+    
+}
+
+section .events ul li .details a:hover{
+
+
+    background-color: #e91e63;
+    color: #fff;
+    border-color: #e91e63;
+    
+}
+
+.widget{
+    
+    width: 111.2%;
+    height: 100%;
+    margin-top: 5px;
+       
+}
+
+
+@media(max-width:991px)
+{
+    section{
+        
+        height: 100%;
+        background-position: center;
+    }    
+section .leftbox{
+     
+        width: 100%;
+        height: auto;
+        float: none;
+        padding: 20px;
+    }
+section .events
+    {  width: 100%;
+        height: auto;
+        background: transparent;
+        float: none;      
+    }
+    
+    
+    
+section .leftBox .content{
+        
+        padding: 20px;
+    
+    }
+    
+    section .leftBox .content h1{
+        font-size: 35px;
+        text-align: center;
+    }
+    
+    section .events ul{
+        
+        position: relative;
+        transform: translate(0px);
+        padding: 0 20px 20px;
+    }
+    
+    section .events ul li{
+        
+        height: auto;
+        background: rgba(255,255,255, .8);
+        
+    }
+    
+    
+    section .events ul li .time{
+        
+        width: 145px;
+        height: 110px;
+        padding: 0;
+
+        
+        
+    }
+    
+    
+    section .events ul li .time h2{
+        
+       font-size: 30px;
+        line-height: 100%;
+      
+
+        
+        
+    }
+    
+    section .events ul li .time span{
+        
+        font-size: 10px;
+        
+
+        
+        
+    }
+    
+    section .events ul li .details
+    {
+        width: 100%;
+        float: none;
+        padding-left: 160px;
+        background: transparent;
+        
+        
+    }
+    
+    section .events ul li .details a
+    {
+       padding:  5px 10px;
+        
+        
+        
+    }
+    
+}
+
+@media(max-width:1366px){
+    
+    
+    
+    section .leftbox{
+     
+        width: 90%;
+        height: auto;        
+        padding: 20px;
+        margin-left: 35px
+    }
+     
+    section .leftbox .content h1{        
+        
+        text-align: center;
+        font-size: 35px;
+        
+    }
+    
+    section .events ul li .time{ 
+        width: 130px;
+        height: 100px;
+        padding: 0;
+    }
+    
+    
+    section .events ul li .time h2 {
+         
+         font-size: 26px;
+         text-align: center;
+        
+        
+         
+    }
+    
+    section .events ul li .time h2 span{
+        
+        font-size: 25px;
+         text-align: center;
+        
+    }
+    
+    section .events
+    {  
+      width: 100%;
+             
+    }
+    
+}
+
+
+
+
+
+
+@media(max-width:812px){
+  section .leftbox .content h1 {  
+    font-size: 25px;
+    text-align: center;
+    }
+    
+    
+    section .events ul li .time{
+        
+        width: 110px;
+        height: 100px;
+        padding: 0;
+
+        
+        
+    }
+    
+    
+    section .events ul li .time h2{
+        
+      
+        line-height: 90%;
+        font-size:24px;
+         text-align: center;        
+        
+    }
+        
+    
+    
+    section .events ul li .time h2 span{
+        
+        font-size: 20px;
+         text-align: center;
+        
+    }
+    
+    section .events ul li .details{
+        padding-top: 130px;
+        padding-left: 30px;
+        
+    }
+     section .events ul li .details a
+    {
+        display: inline-block;
+        padding: 8px 10px;
+        font-size: 14px;
+      margin-left: 40%;
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

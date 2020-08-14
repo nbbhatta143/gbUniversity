@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using GroupBCapstoneProject.Data
+
+@{
+    <div id="View Balances">
+        <h4>Faculty Balances</h4>
+        <div class="col-md-12">
+            <div class="row" style="font-weight: bold">
+                <div class="col-md-3">First Name</div>
+                <div class="col-md-3">Last Name</div>
+                <div class="col-md-3">What We Owe</div>
+                <div class="offset-3"></div>
+            </div>
+
+            <div class="row">
+                @foreach (Faculty faculty in ViewBag.listOfFaculty)
+                {
+                    <div class="col-md-3">@faculty.FirstName</div>
+                    <div class="col-md-3">@faculty.LastName</div>
+                    <div class="col-md-3">@faculty.Balance</div>
+                    <div class="offset-3"></div>
+                }
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,768 @@
+/*  Generalise
+--------------------------------------------------------------------------*/
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+
+html{
+    
+    overflow-y: scroll;
+    overflow-x: hidden; 
+        
+    
+ 
+}
+
+.con{
+      
+    background-color: #192A56;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    height: 32vh;   
+    margin: 0;
+    width: 250px;
+    
+}
+
+.con h1{
+    font-size: 25px;
+    margin: 0;
+     font-family: fantasy;
+        color: #fff;
+}
+.con p{
+    font-size: 20px;
+    font-family: fantasy;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+
+
+@media screen and (max-width:960px)
+{
+    
+    .con{
+        height: 32vh;
+        
+    }
+    .con p{
+    font-size: 18px;
+    font-family: fantasy;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 2px;
+    margin: 0;
+}
+}
+@media screen and (max-width:768px)
+{
+    .con p{
+    font-size: 14px;
+    font-family: fantasy;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 2px;
+    margin: 0;
+}
+    .con{
+        height: 32vh;
+        
+    }
+}
+
+@media screen and (max-width:480px)
+{
+    .con p{
+    font-size: 12px;
+    font-family: fantasy;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 2px;
+    margin: 0;
+}
+    .con{
+        height: 32vh;
+        
+    }
+}
+
+html,body{
+ 
+    padding:0;
+    font-size:16px;
+    line-height: 1.6em;
+
+}
+
+body{
+    color: #cbcbcb;
+    background-color: #fff;
+}
+
+
+
+a{
+    color: #dc3545;
+    outline: none;
+    text-decoration: none !important;
+}
+a:active, a:focus{
+    background:transparent;
+}
+
+nav,body,input, textarea{
+    font-family: Verdana,Geneva, sans-serif;
+}
+
+.wrapper{
+   display: block;
+    position: relative;
+    width:100%;
+    margin: 0;
+    padding-top: 0px;
+    text-align: left;
+    word-wrap:break-word;    
+    
+}
+
+/*Transition Fade.This gives a smooth transition effect to all the elements */
+
+
+
+*,*::before, *::after{
+transition:all 0.2s ease-in-out;
+list-style: none;}
+
+h1,h2,h3,h4,h5,h6,.heading{
+    
+    font-family: "Fira Code", monospace;
+    margin:0;
+    line-height: normal;
+    font-weight: normal;    
+    
+}
+
+address{
+    font-style: normal;
+    font-weight: normal;}
+
+.font-xs{font-size:0.8rem;}
+
+/*Additional Menu Links and Social Isons
+--------------------------------------------*/
+#secondaryNavbar .navbar-nav .nav-item{
+    
+    display: flex; /*For aligning "| " after each link */
+  
+}
+
+
+
+#secondaryNavbar .navbar-nav .nav-item::after{
+    
+    content: "|";
+    margin-left: 0px;
+    align-self: center;
+}
+
+/* Remove the divider "|" and margin after the link */
+
+#secondaryNavbar .navbar-nav .nav-item:last-child::after{
+    margin-left:90px;content: "";
+    
+}
+
+/* Font Awesome Icons*/
+
+
+.social-icon{margin:5px;padding:0;list-style: none;
+}
+.social-icon a{
+    
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    text-align: center;
+    color: #32353c; /* Dark Grey*/
+    background-color: lightsteelblue;
+}
+
+.social-icon li {
+    
+    display: inline-block;
+    margin: 0 8px 0 0;
+    padding: 0;
+    line-height: normal;
+    
+}
+.social-icon a:hover{
+    
+    color: #fff !important;
+}
+
+/*Background colors for Font Awesome Icons*/
+
+
+
+.faicon-facebook:hover{
+    background-color: #3b5998 !important;
+}
+.faicon-twitter:hover{
+    background-color: #00acee !important;
+}
+.faicon-instagram:hover{
+    background-color: #ea4c89 !important;
+}
+.faicon-linkedin:hover{
+    background-color: #0e76a8 !important;
+    
+}
+
+.faicon-youtube:hover{
+    background-color: #c8232c !important;
+    
+}
+
+ /*Header for Logo*/
+
+
+#header header{height: 13.5rem;}
+/*--#header h2{font-size: 2.5rem; letter-spacing: 2px;}
+#header .t3{font-family: Ubuntu,sans-serif;font-weight: 00;}
+#header { color: red;}
+#header h2:hover{color:#28a745 !important;cursor: pointer;}
+
+
+#
+
+
+
+*/
+
+#navbarDropdpwn{
+    
+    
+    color:#fff;
+  font-family: inherit;
+}
+/* Media Quries for Responsiveness
+
+sm:576px; md:768px; lg:992px; xl:1200px; */
+
+@media screen and (max-width: 992px){
+    
+      
+    #header .img-fluid {height:105px;
+        max-width: 10%;}
+    
+}
+
+
+
+/* Logo image*/
+.navbar-brand{
+margin-top:70px;
+margin-left:0;
+
+
+}
+
+
+
+#secondaryNavbar{
+    background-color:cadetblue;
+    max-width: 100%;
+    position: relative;
+  
+   
+}
+
+.nav-item li{
+    display: inline-block;
+    text-align: center;
+    
+    
+  
+}
+.nav-item:hover{background-color:goldenrod;
+  
+}
+ 
+
+
+.navbar-nav a {
+    
+   
+  display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: 700;
+   
+    color: #fff;
+    
+    
+   
+    
+}
+
+
+/* Navigation /Menu Bar
+-------------------------------------------------------*/
+
+#mainNavbar.navbar .nav-item:hover{background-color:rgba(220,53,69,0.7);
+
+}
+
+#mainNavbar.navbar .active{background-color: #dc3545;}
+
+
+
+/* To remove space on top and bottom of nav links*/
+
+#mainNavbar a.nav-link{padding: 0.8rem;}
+#mainNavbar.navbar-dark .navbar-nav .nav-link:hover{
+    color: #fff;
+}
+    
+.dropdown-item{color: #fff;} 
+
+.dropdown-item:hover{background-color: #dc3545;color: #fff; }
+
+
+/* Button Apply*/
+
+
+
+
+/*Cover Image */
+
+
+
+
+
+}
+
+
+@media screen and (max-width:1300px){
+      #header .img-fluid{ margin-top: 66px;}
+    
+}
+
+
+
+    @media screen and (max-width: 992px){     
+       
+       
+        
+   
+    #header .img-fluid {height:105px;
+        max-width: 35%;
+        position: absolute;
+        top: 45%}
+        
+    } 
+    
+
+
+    
+
+@media (min-width: 769px) and (max-width: 1024px){
+#header a.cap-button {
+    position: relative;   
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 1em;   
+    top: 65%;
+    
+}
+ #header .img-fluid{ height:105px;
+    max-width: 90%;
+        position: absolute;
+        top: 45%
+    
+}
+}
+
+
+@media screen and (max-width: 576px){
+    #header a.cap-button{margin-left: 125px;}
+      
+          
+    
+    }
+     
+    
+
+
+
+   .cap-button {
+    font-size: 1 .25em;
+    padding: .5em 1.25em 0.35em 1.25em;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #0073aa;
+    border: 0;
+    color: #fff;
+    font-family: "AvenirLT-Heavy",Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    top: 55%;
+     
+    
+          
+          
+}
+
+
+
+
+
+
+
+/* Overlay Effect for IMages*/
+
+
+/*Media Queires */
+
+
+
+@media screen and (max-width:1200px){
+    
+    #pageintro .heading{font-size:7rem !important;}
+    #pageintro .text-secondary{font-size:1.5rem !important;} 
+    #pageintro .hor-cen{font-size: 1.5rem !important;}
+    
+    
+}
+
+@media screen and (max-width:992px){
+    
+    #pageintro .heading{font-size:6rem !important;}
+    #pageintro .text-secondary{font-size:1.2rem !important;} 
+    #pageintro .hor-cen{font-size: 1rem !important;}
+    #pageintro.pl-5(padding-left: 0 !important;)
+    
+    
+    
+}
+@media screen and (max-width:768px){
+    
+    #pageintro .heading{font-size:5rem !important;}
+    #pageintro .hor-cen{font-size:1rem !important;} 
+    #pageintro.ml-5(margin-left: 0 !important;)
+    #pageintro .hor-cen{font-size: 1rem !important;}
+    
+    
+}
+@media screen and (max-width:576px){
+    
+    #pageintro .heading{font-size:4rem !important;}
+    #pageintro .text-secondary{font-size:1rem !important;} 
+    #pageintro.ml-5(margin-left: 0 !important;)
+    #pageintro .hor-cen{font-size: 1rem !important;}
+    
+    
+}
+
+div.row.buff-boxes {
+    background: #e3dccc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3px;
+}
+
+
+.row .buff-box h3 {
+    color: #033C5A;
+}
+.row .blue-box h3, .row .buff-box h3 {
+    margin-top: 5;
+}
+.container h3.promo-title {
+    font-family: "AvenirLT-Heavy",Helvetica,Arial,sans-serif;
+    color: #033C5A;
+    font-size: 24px;
+    line-height: 27px;
+    text-decoration: none;
+    font-weight: normal !important;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em !important;
+    text-align: center;
+}
+
+
+
+
+
+
+
+@media (min-width: 960px)
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@media (min-width: 960px)
+*, *:before, *:after {
+    box-sizing: unset;
+}
+@media (min-width: 960px)
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.row .buff-box h3 {
+    color: #033C5A;
+}
+.row .blue-box h3, .row .buff-box h3 {
+    margin-top: 10px;
+}
+.row {
+    margin-left: -32px;
+    margin-right: -32px;
+}
+
+.buff-boxes{
+    
+    padding: 40px;
+} 
+
+@media (min-width: 840px)
+.col-md-12 {
+    width: 100%;
+}
+@media (min-width: 840px)
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+}
+@media (min-width: 460px)
+.col-sm-12 {
+    width: 100%;
+}
+@media (min-width: 460px)
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+}
+
+
+
+.buff-boxes .buff-box, .blue-boxes .blue-box {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.marketing-text, span.marketing-text, p.marketing-text {
+    color: #033c5a;
+    margin: 10;
+    padding: 0;
+    font-family: 'Avenir Next Cyr W00 Light';
+    font-size: 18px;
+    line-height: 1.5em;
+    letter-spacing:  1.em;
+    text-rendering: optimizeLegibility;
+}
+
+p:first-of-type {
+     margin-top: 0em; */
+    padding-top: 0em; */
+ padding-bottom: 0em; */
+    margin-bottom: 0.75em; */
+}
+.img-fav{
+    
+    position: relative;
+   top: 0px;
+   right: 100px;
+
+
+    
+     
+  max-width: 100px;
+  height: auto;
+}
+
+/*Back to Top*/
+
+
+
+.to-top{
+	color:white;
+    font-size: 25px;
+	padding-top:.8em;	
+	position:relative;
+	border-color:white;
+	text-decoration:red;
+	transition:all .3s ease-out;    
+      background-color: blue;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;    
+    width: 220px;
+    margin-top: 25px;
+    
+  
+}
+.to-top:before{
+	content:'▲';
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em white;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:orangered;
+	border-color:gold;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+    color: aqua;
+}
+
+/*down arrow*/
+
+
+/*Event section*/
+
+#event{
+    background-color: antiquewhite;
+   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+    
+    
+}
+/*hr { display: block; margin-before: 0.5em; margin-after: 0.5em; margin-start: auto; margin-end: auto; overflow: hidden; border-style: inset; border-width: 5px;}*/
+
+
+hr {
+    width: 80%;    
+    margin-left: auto;
+    margin-right: auto;
+    background-color:orangered;     
+    border-width: 15px;
+}
+
+
+/*hr {width: 300px;margin-left: auto;margin-right: auto;height: 100px;background-color:#666;opcaity: 0.5;}*/
+
+
+
+
+/*About Us*/
+
+
+
+
+
+
+/* Global */
+.containerA{
+  width:85%;
+  margin:auto;
+  overflow:hidden;
+      
+}
+
+
+
+
+
+.dark{
+  padding:15px;
+  background:grey;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+
+
+/* Sidebar */
+aside#sidebar{
+  float:right;
+  width:30%;
+  margin-top:20px;
+}
+
+
+
+/* Main-col */
+article#main-col{
+  float:left;
+  width:65%;
+}
+h3 {
+    
+    text-align: center;
+}
+
+
+
+/* Media Queries */
+@media(max-width: 768px){ 
+ 
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  
+}
+
+.heading {
+    text-align: left;
+}
+
+
+
+.go-down{
+  position: absolute;
+  bottom: 70px;
+  width: 35px;
+  height:50px;
+  border:3px solid #fff;
+  display: block;
+  border-radius:4px;
+  text-align: center;
+  left:50%;
+  margin-left: -13px;
+}
+.go-down .fa{
+	color:orange;
+	-webkit-animation: goDown 1s ease infinite;
+	animation: goDown 1s ease infinite;
+}
+@-webkit-keyframes goDown{
+	0%{transform: translateY(0);opacity:.5}
+	100%{transform: translateY(10px);}
+}
+@keyframes goDown{
+	0%{transform: translateY(0);opacity:.5}
+	100%{transform: translateY(10px);}
+}
+
+
+
+
+

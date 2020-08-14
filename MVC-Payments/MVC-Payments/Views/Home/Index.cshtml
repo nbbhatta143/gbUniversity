@@ -1,0 +1,152 @@
+﻿@model MVC_Payments.Models.PaymentModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+</head>
+<h5 style="color: red;">@ViewData["ErrorMessage"]</h5>
+<body class="bg-secondary">
+    <div class="container">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-body">
+                        <div class="card-body">
+                            <div class="form-horizontal ">
+                                <h4 class="text-center">Billing Address</h4>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label asp-for="FirstName" class="control-label"></label>
+                                        <input asp-for="FirstName" class="form-control bg-light" required placeholder="First name on the card" />
+                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label asp-for="LastName" class="control-label"></label>
+                                        <input asp-for="LastName" class="form-control bg-light" required placeholder="Last name on the card" />
+                                        <span asp-validation-for="LastName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label asp-for="Address1" class="control-label"></label>
+                                        <input asp-for="Address1" class="form-control bg-light" required placeholder="City" />
+                                        <span asp-validation-for="Address1" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label asp-for="PostCode" class="control-label"></label>
+                                        <input asp-for="PostCode" class="form-control bg-light" required placeholder="Ex. 12345" />
+                                        <span asp-validation-for="PostCode" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label asp-for="Address2" class="control-label"></label>
+                                        <input asp-for="Address2" class="form-control bg-light" required placeholder="Your billing address" />
+                                        <span asp-validation-for="Address2" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-body">
+                        <div class="card-body">
+                            <div class="form-horizontal">
+                                <h4 class="text-center">Payment Information</h4>
+                                <hr/>
+                                <div class="card-row">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <span asp-validation-for="CardNumber" class="text-danger"></span>
+                                            <label asp-for="CardNumber" class="control-label"></label>
+                                            <input asp-for="CardNumber" class="form-control bg-light" placeholder="Ex. 4111111111111111" required />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <span asp-validation-for="CardCode" class="text-danger"></span>
+                                            <label asp-for="CardCode" class="control-label"></label>
+                                            <input asp-for="CardCode" class="form-control bg-light" placeholder="Ex.1234" required />
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <span asp-validation-for="Month" class="text-danger"></span>
+                                            <label asp-for="Month" class="control-label"></label>
+                                            <!--<input asp-for="Month" class="form-control bg-light" placeholder="MM" required />-->
+                                            <select asp-for="Month" class="form-control bg-light" placeholder="Month" required>  
+                                                <option value="">Month</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label asp-for="Year" class="control-label"></label>
+                                            <select asp-for="Year" class="form-control bg-light" placeholder="YYYY" required>
+                                                <option value="">Year</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                                <option value="2027">2027</option>
+                                                <option value="2028">2028</option>
+                                                <option value="2029">2029</option>
+                                                <option value="2030">2030</option>
+                                            </select>
+                                            <span asp-validation-for="Year" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <span asp-validation-for="Amount" class="text-danger"></span>
+                                            <label asp-for="Amount" class="control-label"></label>
+                                            <input asp-for="Amount" class="form-control" placeholder="$$$.$$" required />
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="card card-footer">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <input type="submit" value="Pay" class="btn btn-primary" />
+                                            </div>
+                                            <div class="display-field text-center col-sm-5">
+                                                <img src="~/images/credit-card-logos.png" class="img-fluid" style="margin-bottom:auto" height="150" width="300" />
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <a asp-action="Index" class="btn btn-primary text-white">Refresh</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
